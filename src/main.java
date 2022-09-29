@@ -1,46 +1,30 @@
 import java.sql.*;
-
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 public class main
 {
+    //設定檔
+    public main()
+    {
+        while(true)
+        {
+            try
+            {
+                Thread.sleep(1000);
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                System.out.print(dtf.format(LocalDateTime.now())+"  |   ");
+            }
+            catch (InterruptedException e)
+            {
+                throw new RuntimeException(e);
+            }
+            query query = new query();
+            query .query(2,"SELECT * FROM `air`");
+        }
+    }
     public static void main(String[] args)
     {
-        try
-        {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Driver loaded!");
-        }
-        catch (ClassNotFoundException e)
-        {
-            System.out.println("找不到驅動程式類別");
-            e.printStackTrace();
-        }
-
-        try
-        {
-            Connection connection = getConnection();
-            Statement statement = connection.createStatement();
-            // 查詢city表
-            try (ResultSet resultSet = statement.executeQuery("SELECT * FROM air")) {
-                while (resultSet.next()) {
-                    System.out.println(resultSet.getString("id") + "    " + resultSet.getString(
-                            "aid") + "   ");
-                }
-            }
-        }
-        catch (SQLException e)
-        {
-            e.printStackTrace();
-        }
+        new  main();
     }
 
-    //設定檔
-    private static Connection getConnection() throws SQLException {
-        String serverName = "localhost";
-        String database = "test";
-        String url = "jdbc:mysql://" + serverName + "/" + database;
-        // 帳號和密碼
-        String user = "root";
-        String password = "";
-        return DriverManager.getConnection(url, user, password);
-    }
 }
