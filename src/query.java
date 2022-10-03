@@ -1,7 +1,7 @@
 import java.sql.*;
 public class query
 {
-
+    String out="";
     public void query(int number, String put)
     {
         try
@@ -28,8 +28,7 @@ public class query
                 {
                     while (resultSet.next())
                     {
-                        System.out.println(resultSet.getString("id") + "    " + resultSet.getString(
-                                "aid") + "   ");
+                       out = resultSet.getString("id");
                     }
                 }
                 else
@@ -42,6 +41,11 @@ public class query
         {
             e.printStackTrace();
         }
+    }
+    public String output()
+    {
+
+        return out;
     }
 
 }
