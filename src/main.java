@@ -6,21 +6,9 @@ public class main
     //≥]©w¿…
     public main()
     {
-        while(true)
-        {
-            try
-            {
-                Thread.sleep(1000);
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-                System.out.print(dtf.format(LocalDateTime.now())+"  |   ");
-            }
-            catch (InterruptedException e)
-            {
-                throw new RuntimeException(e);
-            }
             query query = new query();
-            query .query(2,"SELECT * FROM `air`");
-        }
+            query.query(1,"INSERT INTO `main` VALUES(NULL,\"2022/10/25 04:22:09\");");
+            System.out.println();
     }
     public static void main(String[] args)
     {

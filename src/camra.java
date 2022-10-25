@@ -17,7 +17,7 @@ public class camra
     {
         System.loadLibrary("opencv_java310");
     }
-    private JFrame frame;
+    public JFrame frame;
     static JLabel label;
     static int flag=0;
     public static void main(String[] args)

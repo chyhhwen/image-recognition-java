@@ -16,26 +16,39 @@ public class query
         try
         {
             Connection connection = sqlset.getConnection();
-            Statement statement = connection.createStatement();
             // ¬d¸ßcityªí
-            try (ResultSet resultSet = statement.executeQuery(put))
-            {
                 if(number == 1)//USE
                 {
+                    Statement statement = connection.createStatement();
+                    try
+                    {
+                        statement.executeUpdate(String.format(put));
+                    }
+                    catch (SQLException e)
+                    {
+                        e.printStackTrace();
+                    }
                     System.out.println("input yes");
+
+                    connection.close();
                 }
                 else if(number == 2)// select all
                 {
+                    Statement statement = connection.createStatement();
+                    ResultSet resultSet = statement.executeQuery(put);
                     while (resultSet.next())
                     {
                        out = resultSet.getString("id");
+                        System.out.printf("%d ",resultSet.getInt(1));
+                        System.out.printf("%s",resultSet.getString(2));
                     }
+                    connection.close();
                 }
                 else
                 {
                     System.out.println("ERROR SQLPUT");
                 }
-            }
+
         }
         catch (SQLException e)
         {
