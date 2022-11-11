@@ -3,21 +3,18 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.30.jar!/" />
       <root url="jar://$PROJECT_DIR$/opencv/build/java/opencv-310.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3" />
     </CLASSES>
     <JAVADOC>
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1/Doc/javadoc" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3/Doc/javadoc" />
     </JAVADOC>
     <NATIVE>
       <root url="file://$APPLICATION_HOME_DIR$/bin" />
+      <root url="file://$PROJECT_DIR$/opencv/build/java/x64" />
     </NATIVE>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/opencv/build/java/opencv-310.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1/Demo/embed" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1/Demo/jreload/src" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1/src" />
-      <root url="file://$PROJECT_DIR$/../../../../jython2.7.1/tests/java" />
       <root url="file://$PROJECT_DIR$/opencv/sources/modules/java/android_test/src" />
       <root url="file://$PROJECT_DIR$/opencv/sources/modules/java/common_test/src" />
       <root url="file://$PROJECT_DIR$/opencv/sources/modules/java/pure_test/src" />
@@ -35,8 +32,10 @@
       <root url="file://$PROJECT_DIR$/opencv/sources/samples/java/ant/src" />
       <root url="file://$PROJECT_DIR$/opencv/sources/samples/java/eclipse/HelloCV/src" />
       <root url="file://$PROJECT_DIR$/opencv/sources/samples/java/sbt/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3/Demo/embed" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3/Demo/jreload/src" />
+      <root url="file://$PROJECT_DIR$/../../../../jython2.7.3/tests/java" />
     </SOURCES>
-    <jarDirectory url="file://$PROJECT_DIR$/../../../../jython2.7.1" recursive="false" />
-    <jarDirectory url="file://$PROJECT_DIR$/../../../../jython2.7.1" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../jython2.7.3" recursive="false" />
   </library>
 </component>

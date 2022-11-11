@@ -1,16 +1,11 @@
-import java.awt.*;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
-import org.opencv.core.*;
 import org.opencv.core.Point;
+import org.opencv.core.*;
+import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.videoio.VideoCapture;
-import org.opencv.imgproc.Imgproc;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import javax.swing.*;
+import java.awt.*;
 
 public class project
 {
@@ -35,7 +30,7 @@ public class project
         label.setBounds(50,50,640,480);
         frame.getContentPane().add(label);
     }
-    private static void sql()
+    /*private static void sql()
     {
         query query = new query();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -44,7 +39,7 @@ public class project
         String put = input+date+"\");";
         query.query(1,put);
         System.out.print(date+" | ");
-    }
+    }*/
     public static void main(String[] args)
     {
         EventQueue.invokeLater(new Runnable()
@@ -63,7 +58,7 @@ public class project
                 }
             }
         });
-        String xmlFile = "C:/Users/USER/Desktop/project1/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
+        String xmlFile = "C:/Users/USER/Desktop/java-database-recognition/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml";
         CascadeClassifier cascadeClassifier = new CascadeClassifier(xmlFile);
         if(cascadeClassifier.empty())
         {
@@ -101,7 +96,7 @@ public class project
                                     new Scalar(0,255,0),3);
                         }
                         label.setIcon(new ImageIcon(matImage.matToBufferedImage(frame)));
-                        try
+                        /*/try
                         {
                             Thread.sleep(800);
                             sql();
@@ -109,16 +104,16 @@ public class project
                         catch (InterruptedException e)
                         {
                             throw new RuntimeException(e);
-                        }
+                        }*/
                     }
-                    try
+                    /*try
                     {
                         Thread.sleep(100);
                     }
                     catch (InterruptedException e)
                     {
                         e.printStackTrace();
-                    }
+                    }*/
                 }
             }
         }

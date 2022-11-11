@@ -1,15 +1,9 @@
-import java.util.List;
-import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfRect;
-import org.opencv.core.Point;
-import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
-import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.videoio.VideoCapture;
+
+import java.util.List;
 
 public class face
 {
@@ -44,7 +38,7 @@ public class face
 
     public static void detectHumenFrontFace(Mat rgb, Mat gray)
     {
-        CascadeClassifier cascade = new CascadeClassifier("C:/Users/USER/Desktop/project1/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml");
+        CascadeClassifier cascade = new CascadeClassifier("C:/Users/USER/Desktop/java-database-recognition/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml");
         if (cascade.empty())
         {
             System.out.println("ÀÉ®×Åª¨ú¥¢±Ñ");

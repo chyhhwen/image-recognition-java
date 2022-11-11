@@ -1,15 +1,7 @@
-import java.util.List;
-import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfRect;
-import org.opencv.core.Point;
-import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
-import org.opencv.videoio.VideoCapture;
 public class DetectFaceTest
 {
     static
@@ -20,8 +12,8 @@ public class DetectFaceTest
    public static void detectFace(String imagePath,  String outFile) throws Exception
     {
         System.out.println("Running DetectFace ... ");
-        CascadeClassifier faceDetector = new CascadeClassifier("C:/Users/USER/Desktop/project1/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml");
-        faceDetector.load("C:/Users/USER/Desktop/project1/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml");
+        CascadeClassifier faceDetector = new CascadeClassifier("C:/Users/USER/Desktop/java-database-recognition/opencv/sources/data/haarcascades/haarcascade_frontalface_alt.xml");
+        faceDetector.load("C:/Users/USER/Desktop/java-database-recognition/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml");
         Mat image = Imgcodecs.imread(imagePath);
         MatOfRect faceDetections = new MatOfRect();
         faceDetector.detectMultiScale(image, faceDetections);
@@ -40,6 +32,6 @@ public class DetectFaceTest
        }
        public static void main(String[] args) throws Exception
        {
-          detectFace("C:/Users/USER/Desktop/project1/src/lenna.png", "C:/Users/USER/Desktop/project1/src/out.png");
+          detectFace("C:/Users/USER/Desktop/java-database-recognition/src/lenna.png", "C:/Users/USER/Desktop/java-database-recognition/src/out.png");
        }
  }
