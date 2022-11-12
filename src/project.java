@@ -40,9 +40,7 @@ public class project
         String input = "INSERT INTO `focus` VALUES(NULL,";
         String put = input + "\"" + put1 + "\",";
         put = put + "\"" + date +"\");";
-        //query.query(1,put);
-        //System.out.print(date+" | ");
-        query.query(2,"SELECT * FROM `focus`");
+        query.query(3,put);
         System.out.println(put);
     }
     public static void main(String[] args)
