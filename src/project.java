@@ -13,7 +13,7 @@ public class project
 {
     static
     {
-        System.loadLibrary("opencv_java310");
+        System.loadLibrary("opencv_java310");/*引入opencv*/
     }
     public static JFrame frame;
     static JLabel label;
@@ -22,17 +22,17 @@ public class project
     {
         initialize();
     }
-    private void  initialize()
+    private void  initialize()//*劃出GUI*/
     {
         frame = new JFrame();
-        frame.setBounds(100,100,798,600);
+        frame.setBounds(100,100,850,650);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
         label = new JLabel("");
         label.setBounds(50,50,640,480);
         frame.getContentPane().add(label);
     }
-    private static void sql(int put1)
+    private static void sql(int put1)/*資料庫*/
     {
         query query = new query();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -43,7 +43,7 @@ public class project
         query.query(3,put);
         System.out.println(put);
     }
-    public static void main(String[] args)
+    public static void main(String[] args)/*主要*/
     {
         EventQueue.invokeLater(new Runnable()
         {

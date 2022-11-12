@@ -1,6 +1,6 @@
 import java.sql.DriverManager;
 import java.sql.*;
-public abstract class sqlset
+public abstract class sqlset /*資料庫設定*/
 {
     public sqlset()
     {

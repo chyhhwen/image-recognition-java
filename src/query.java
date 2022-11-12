@@ -122,7 +122,7 @@ public class query
             e.printStackTrace();
         }
     }
-    public String output()
+    public String output()/*¿é¥X¿é¤J­È*/
     {
 
         return out;
