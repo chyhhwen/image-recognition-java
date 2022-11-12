@@ -6,6 +6,8 @@ import org.opencv.videoio.VideoCapture;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class project
 {
@@ -30,16 +32,19 @@ public class project
         label.setBounds(50,50,640,480);
         frame.getContentPane().add(label);
     }
-    /*private static void sql()
+    private static void sql(int put1)
     {
         query query = new query();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         String date = dtf.format(LocalDateTime.now());
-        String input = "INSERT INTO `main` VALUES(NULL,\"";
-        String put = input+date+"\");";
-        query.query(1,put);
-        System.out.print(date+" | ");
-    }*/
+        String input = "INSERT INTO `focus` VALUES(NULL,";
+        String put = input + "\"" + put1 + "\",";
+        put = put + "\"" + date +"\");";
+        //query.query(1,put);
+        //System.out.print(date+" | ");
+        query.query(2,"SELECT * FROM `focus`");
+        System.out.println(put);
+    }
     public static void main(String[] args)
     {
         EventQueue.invokeLater(new Runnable()
@@ -90,30 +95,16 @@ public class project
                     if(!matOfRect.empty())
                     {
                         Rect[] rects = matOfRect.toArray();
+                        int people = 0;
                         for(Rect r : rects)
                         {
                             Imgproc.rectangle(frame,new Point(r.x,r.y),new Point(r.x+r.width,r.y+r.height),
                                     new Scalar(0,255,0),3);
+                            people += 1;
                         }
                         label.setIcon(new ImageIcon(matImage.matToBufferedImage(frame)));
-                        /*/try
-                        {
-                            Thread.sleep(800);
-                            sql();
-                        }
-                        catch (InterruptedException e)
-                        {
-                            throw new RuntimeException(e);
-                        }*/
+                        sql(people);
                     }
-                    /*try
-                    {
-                        Thread.sleep(100);
-                    }
-                    catch (InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }*/
                 }
             }
         }

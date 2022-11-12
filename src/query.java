@@ -16,8 +16,7 @@ public class query
         try
         {
             Connection connection = sqlset.getConnection();
-            // 查詢city表
-                if(number == 1)//USE
+                if(number == 1)//輸入
                 {
                     Statement statement = connection.createStatement();
                     try
@@ -28,19 +27,33 @@ public class query
                     {
                         e.printStackTrace();
                     }
-                    System.out.println("input yes");
 
+                    System.out.println("input yes");
                     connection.close();
                 }
-                else if(number == 2)// select all
+                else if(number == 2)//查詢
                 {
                     Statement statement = connection.createStatement();
                     ResultSet resultSet = statement.executeQuery(put);
                     while (resultSet.next())
                     {
-                       out = resultSet.getString("id");
-                        System.out.printf("%d ",resultSet.getInt(1));
-                        System.out.printf("%s",resultSet.getString(2));
+                        out = resultSet.getString("id");
+                        /*System.out.printf("%d ",resultSet.getInt(1));
+                        System.out.printf("%s ",resultSet.getString(2));*/
+                        System.out.printf("%s",resultSet.getString(3));
+                    }
+                    connection.close();
+                }
+                else if(number == 3)//應用
+                {
+                    Statement statement = connection.createStatement();
+                    ResultSet resultSet = statement.executeQuery(put);
+                    while (resultSet.next())
+                    {
+                        out = resultSet.getString("id");
+                        /*System.out.printf("%d ",resultSet.getInt(1));
+                        System.out.printf("%s ",resultSet.getString(2));*/
+                        System.out.printf("%s",resultSet.getString(3));
                     }
                     connection.close();
                 }

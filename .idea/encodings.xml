@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/README.md" charset="x-windows-950" />
     <file url="file://$PROJECT_DIR$/src/DetectFaceTest.java" charset="x-windows-950" />
     <file url="file://$PROJECT_DIR$/src/face.java" charset="x-windows-950" />
+    <file url="file://$PROJECT_DIR$/src/frame.java" charset="x-windows-950" />
     <file url="file://$PROJECT_DIR$/src/query.java" charset="x-windows-950" />
+    <file url="file://$PROJECT_DIR$/src/sqlset.java" charset="x-windows-950" />
   </component>
 </project>
