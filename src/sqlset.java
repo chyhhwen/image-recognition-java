@@ -6,7 +6,8 @@ public abstract class sqlset /*資料庫設定*/
     {
 
     }
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() throws SQLException
+    {
         String serverName = "localhost";
         String database = "recognition";
         String url = "jdbc:mysql://" + serverName + "/" + database;
