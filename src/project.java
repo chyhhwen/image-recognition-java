@@ -1,5 +1,6 @@
 import org.opencv.core.Point;
 import org.opencv.core.*;
+import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.videoio.VideoCapture;
@@ -42,6 +43,18 @@ public class project
         put = put + "\"" + date +"\");";
         query.query(3,put);
         System.out.println(put);
+    }
+    private static String picture()
+    {
+        String path = "C:/Users/USER/Desktop/java-database-recognition/src/picture/";
+        String name = null;
+        file file = new file();
+        /*0清空1讀取2寫入3檔案名稱*/
+        name = file.use(3,"");
+        System.out.println(name);
+        path += name;
+        path += ".jpg";
+        return path;
     }
     public static void main(String[] args)/*主要*/
     {
@@ -90,6 +103,7 @@ public class project
                     MatOfRect matOfRect = new MatOfRect();
                     Imgproc.cvtColor(frame,gray,Imgproc.COLOR_RGB2GRAY);
                     cascadeClassifier.detectMultiScale(gray,matOfRect);
+                    Imgcodecs.imwrite( picture(),frame);
                     if(!matOfRect.empty())
                     {
                         Rect[] rects = matOfRect.toArray();

@@ -5,8 +5,14 @@ import java.time.format.DateTimeFormatter;
 public class file
 {
     private String file_name = "C:\\Users\\User\\Desktop\\java-database-recognition\\src\\picture\\check.txt";
-    private file(int choose,String put)
+
+    public file()
     {
+
+    }
+    public String use(int choose, String put)
+    {
+        String out = null;
         switch (choose)
         {
             case 0:
@@ -19,16 +25,14 @@ public class file
                 write(put);
                 break;
             case 3:
-                check(put);
-                break;
-            case 4:
-                name();
+                out = name();
                 break;
             default:
                 System.out.println("ERROR TXT");
         }
+        return out;
     }
-    private void name()
+    public String name()
     {
         String now_hour = null;
         String now_minute = null;
@@ -47,9 +51,9 @@ public class file
         now_day = date.substring(8,10);
         data_name = now_year + now_month + now_day + "-";
         data_name += now_hour + now_minute + now_second;
-        System.out.println(data_name);
+        return data_name;
     }
-    private void clean()
+    public void clean()
     {
         try
         {
@@ -64,7 +68,7 @@ public class file
         }
 
     }
-    private void write(String date)
+    public void write(String date)
     {
         BufferedWriter writer = null;
         File file = new File(file_name);
@@ -82,7 +86,7 @@ public class file
             throw new RuntimeException(e);
         }
     }
-    private String read()
+    public String read()
     {
         BufferedReader reader = null;
         String out = null;
@@ -107,7 +111,7 @@ public class file
         }
         return out;
     }
-    private void check(String date)
+    public void check(String date)
     {
         String put = read();
         /*if(put != date)
@@ -115,10 +119,5 @@ public class file
 
         }*/
         //System.out.println(put);
-    }
-    public static void main(String[] args)
-    {
-        new file(4,"");
-        /*0清空1讀取2寫入3確認4檔案名稱*/
     }
 }

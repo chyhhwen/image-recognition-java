@@ -13,5 +13,12 @@
 套用模型`haarcascade_frontalface_alt.xml`
 ***
 `讀取當前時間`\
-`DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");`\
-`String date = dtf.format(LocalDateTime.now());`
+`DateTimeFormatter dtf` = `DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")`;\
+`String date` = `dtf.format(LocalDateTime.now())`;
+***
+`檔案處理`\
+`file.java`檔案\
+`0`清空\
+`1`讀取\
+`2`寫入\
+`3`檔名輸出
