@@ -1,24 +1,24 @@
-# ¸ê®Æ®w»P¼v¹³¿ëÃÑ
-`¸ê®Æ®w¨Ï¥Î`\
-»İ­n¤Ş¥Î`mysql-connector-java-8.0.30.jar`\
-µM«á©ñ¦b java project's mod\
-`sqlset.java`¸ê®Æ®w³]©w\
-`query.java`¨Ï¥Î«ü¥O\
-`1`¬°·s¼W¨Ï¥Î\
-`2`¬°¿é¥X¨Ï¥Î
-`3`¨C¬í·s¼W
+# è³‡æ–™åº«èˆ‡å½±åƒè¾¨è­˜
+`è³‡æ–™åº«ä½¿ç”¨`\
+éœ€è¦å¼•ç”¨`mysql-connector-java-8.0.30.jar`\
+ç„¶å¾Œæ”¾åœ¨ java project's mod\
+`sqlset.java`è³‡æ–™åº«è¨­å®š\
+`query.java`ä½¿ç”¨æŒ‡ä»¤\
+`1`ç‚ºæ–°å¢ä½¿ç”¨\
+`2`ç‚ºè¼¸å‡ºä½¿ç”¨\
+`3`æ¯ç§’æ–°å¢
 ***
-`¼v¹³¿ëÃÑ`\
-»İ­n¤Ş¥Î`opencv`\
-®M¥Î¼Ò«¬`haarcascade_frontalface_alt.xml`
+`å½±åƒè¾¨è­˜`\
+éœ€è¦å¼•ç”¨`opencv`\
+å¥—ç”¨æ¨¡å‹`haarcascade_frontalface_alt.xml`
 ***
-`Åª¨ú·í«e®É¶¡`\
+`è®€å–ç•¶å‰æ™‚é–“`\
 `DateTimeFormatter dtf` = `DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")`;\
 `String date` = `dtf.format(LocalDateTime.now())`;
 ***
-`ÀÉ®×³B²z`\
-`file.java`ÀÉ®×\
-`0`²MªÅ\
-`1`Åª¨ú\
-`2`¼g¤J\
-`3`ÀÉ¦W¿é¥X
+`æª”æ¡ˆè™•ç†`\
+`file.java`æª”æ¡ˆ\
+`0`æ¸…ç©º\
+`1`è®€å–\
+`2`å¯«å…¥\
+`3`æª”åè¼¸å‡º
